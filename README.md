@@ -2,7 +2,7 @@
 >__Personally it Studied of javaScript__
 
 1. 기초
-&nbsp;\* 자료형과 변수
+&nbsp;* 자료형과 변수
 &nbsp;\* 배열
 &nbsp;\* 객체
 &nbsp;\* 조건문과 반복문
