@@ -3,6 +3,7 @@
 
 1. 기초
 * 자료형과 변수
+   - - v0.0.1 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/wiki/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85%EA%B3%BC-%EB%B3%80%EC%88%98)
 * 배열
 * 객체
 * 조건문과 반복문

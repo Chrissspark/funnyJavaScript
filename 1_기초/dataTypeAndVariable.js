@@ -83,7 +83,7 @@ variable = var (변수)
     console.log(별명);  // 반환할 값이 지정되지 않았다.
     console.log("-----------");
 
-    var 나이 = 28;
+    var 나이 = 28;                  //p. 18
     var 나이2 = 28;
     console.log(나이2);  // JS에서 부등호(=)는 x의 값이 xy이다가 아니라 부등호 우측의 값(28)을 변수(나이2)에 넣는다는 의미.
     console.log("-----------");  // 변수란, 변할 수 있는 값.
@@ -93,7 +93,8 @@ variable = var (변수)
     console.log(사탕개수 / 사람수);
     console.log("-----------");
 
-    var oneMin = 60;  //한시간 -> 초
+    //계산하며 변수 만들기
+    var oneMin = 60;  //한시간 -> 초            p.20
     var oneHour = 60;
     var aHourSec = oneMin * oneHour;
     console.log(aHourSec);
@@ -114,7 +115,8 @@ variable = var (변수)
     console.log(myAgeSec);  //883,008,000 하............ 김태곤님이 이 책을 번역할때 난 이 책을 본다....
     console.log("-----------");
 
-    var increment = 0;
+    // 부등호 (--, ++)
+    var increment = 0;              //p. 21
     console.log(++increment);
     console.log(++increment);
     console.log(++increment);
@@ -143,4 +145,18 @@ variable = var (변수)
     console.log(decrement2--);
     console.log(decrement2--);
     console.log(decrement2--);
+    console.log("-----------");
+
+    //부등호 (-=, +=)
+    var x = 10;
+    x = x+5;
+    console.log(x);
+    console.log("-----------");
+
+    var 점수 = 10;
+    점수 += 7;
+    console.log(점수);
+    console.log("-----------");
+    점수 -= 3;
+    console.log(점수);      // 점수에 17을 할당했기 때문에 17에서 3을 뺀 값을 출력.
     console.log("-----------");
