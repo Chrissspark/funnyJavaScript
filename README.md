@@ -1,6 +1,8 @@
 # studyGroup  
 
->__Personally it Studied of javaScript__
+>__Personally it Studied of javaScript__  
+
+
 ![MdImage](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 1. 기초
 * 자료형과 변수
