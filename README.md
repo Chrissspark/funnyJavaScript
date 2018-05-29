@@ -28,5 +28,6 @@
 
 |  First try    |   Second try  | Third try|
 |:------------: | :-------------: | :------------:|
-|  fail         |      faill    | sucessed |
-|  fail         | sucessed      |   faill |
+|  fail         |      faill    | sucessed     |
+|  fail         | sucessed      |   faill      |
+|    sucessed   |     faill     |   sucessed   |
