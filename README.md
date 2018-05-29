@@ -3,7 +3,7 @@
 >__Personally it Studied of javaScript__  
 
 
-![MdImage](/img/Md.png)
+![MdImage](/img/Md.png) ![jsImage](/img/javascript.png)
 1. 기초
 * 자료형과 변수
    - v0.0.6 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)
