@@ -339,4 +339,23 @@ NOT = !
     console.log(bath !== bringBackPag);
     console.log("-----------");
 
+    var bath2 = true;
+    var bringBackPag2 = true;
+    console.log(bath2 && bringBackPag2);
+    console.log("-----------");
 
+    var isWeekend = true;
+    var needShower = !isWeekend; //주말을 false 로
+    console.log(needShower);
+    console.log(!needShower); //주말이 아니기 때문에 샤워하지 않아도 된다.
+    console.log("-----------");
+
+    //p.33
+    var 주말인가요 = false;
+    var 샤워하기 = true;
+    var 사과챙기기 = false;
+    var 오렌지챙기기 = true;
+    var 나가야하나요 = !주말인가요 && 샤워하기 && (사과챙기기 || 오렌지챙기기); 
+    console.log(나가야하나요); //AND 연산자를 OR 연산자보다 먼저 계산하기때문에 OR 연산자를 먼저 계산할 수 있도록 ()해준다.
+
+   

@@ -5,9 +5,9 @@
 
 ![MdImage](/img/md2.png) ![jsImage](/img/javascript.png)
 1. 기초
-* 자료형과 변수
-   - v0.0.6 [-chapter01 (데이터 타입과 변수)]
-   - v0.0.7 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)  
+* [자료형과 변수](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)
+   - v0.0.6 -chapter01 (데이터 타입과 변수) 2018.05.28
+   - v0.0.7 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)  2018.05.29
 * 배열
 * 객체
 * 조건문과 반복문
@@ -26,10 +26,7 @@
 * 키보드를 이용한 애니메이션 제어
 * 뱀게임 만들기  
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-
->__개인적인 공부를 위한 Public repo__
+  First try    |   Second try  | Third try
+:------------: | :-------------: | :------------:
+  fail         |      faill    | sucessed
+  fail         | sucessed      |   faill
