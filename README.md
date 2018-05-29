@@ -20,7 +20,12 @@
 * 캔버스 엘리먼트
 * 캔버스 애니메이션
 * 키보드를 이용한 애니메이션 제어
-* 뱀게임 만들기
+* 뱀게임 만들기  
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 >__개인적인 공부를 위한 Public repo__
