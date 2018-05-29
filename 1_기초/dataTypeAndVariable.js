@@ -304,7 +304,15 @@ slice(2,5) 2번까지 짜르고 3~5번까지 보여줌.  앞의2는 어디까지
     console.log(print+ "  R");
     console.log(syntax + "    야매야매");
     console.log("-----------");
-/* 
+
+    var some = 'hellOTherE,HoWArEYoUDoinG??';
+    var answer = some.replace(/([A-Z])/g, ' $1').replace(/\s([A-Z])\s/g, '$1 ').replace(/\s([A-Z][?,])/g, '$1');
+    var regExp = answer.toLowerCase().replace(/^./, function (match) {
+      return match.toUpperCase();
+    });
+    console.log(regExp);
+    console.log("-----------");
+    /* 
 불리언 p.30~39
 참과 거짓 구분
 */
