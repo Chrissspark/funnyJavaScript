@@ -26,7 +26,7 @@
 * 키보드를 이용한 애니메이션 제어
 * 뱀게임 만들기  
 
-  First try    |   Second try  | Third try
-:------------: | :-------------: | :------------:
-  fail         |      faill    | sucessed
-  fail         | sucessed      |   faill
+|  First try    |   Second try  | Third try|
+|:------------: | :-------------: | :------------:|
+|  fail         |      faill    | sucessed |
+|  fail         | sucessed      |   faill |
