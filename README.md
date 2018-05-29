@@ -1,7 +1,7 @@
 # studyGroup  
 
 >__Personally it Studied of javaScript__
-![MdImage](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4#/media/File:Markdown-mark.svg)
+![MdImage](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 1. 기초
 * 자료형과 변수
    - v0.0.6 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)
