@@ -1,17 +1,14 @@
 /*주석 사용
-
 변수, 함수 사용 전의 다중 주석 => 파트별 설명 요약
 변수명 우측 => 예측된 값 || 페이지 
 콘솔 => 고민한 후 해결함 || 못함
 */
 
 /*자료형과 변수 p.13~14
-
 javaScript의 기본형
 숫자 = num
 문자열 = strting
 불리언 = boolean (true & false)
-
 */
     var num= 5;  //p.13
     console.log(num);
@@ -328,9 +325,18 @@ slice(2,5) 2번까지 짜르고 3~5번까지 보여줌.  앞의2는 어디까지
 
 /*
 논리 연산자 p.31~33
-AND && , 
-OR || , 
-NOT  !
+AND = && , 
+OR = || , 
+NOT = !
 */
+    var bath = true;
+    var bringBackPag = false;
+    console.log(bath && bringBackPag);
+    console.log(bath || bringBackPag);
+    console.log(bath != bringBackPag);
+    console.log(bath == bringBackPag);
+    console.log(bath === bringBackPag);
+    console.log(bath !== bringBackPag);
+    console.log("-----------");
 
 
