@@ -7,8 +7,10 @@
 1. 기초
 * [자료형과 변수](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)
    - v0.0.6 -chapter01 (데이터 타입과 변수) 2018.05.28
-   - v0.0.7 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)  2018.05.29
-* 배열
+   - v0.0.7 -chapter01 (데이터 타입과 변수)
+   - v0.0.8 [-chapter01 (데이터 타입과 변수)](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/dataTypeAndVariable.js)  2018.05.29
+* [배열](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/array.js)
+   -  v0.0.1 [-chapter02](https://github.com/Chrissspark/funnyJavaScript/blob/master/1_%EA%B8%B0%EC%B4%88/array.js)
 * 객체
 * 조건문과 반복문
 * 행맨 게임 제작
@@ -28,6 +30,6 @@
 
 |  First try    |   Second try  | Third try|
 |:------------: | :-------------: | :------------:|
-|  fail         |      faill    | sucessed     |
-|  fail         | sucessed      |   faill      |
-|    sucessed   |     faill     |   sucessed   |
+|  fail         |      faill    | succeed     |
+|  fail         | succeed      |   faill      |
+|    succeed   |     faill     |   succeed   |
