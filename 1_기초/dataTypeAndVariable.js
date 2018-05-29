@@ -289,7 +289,7 @@ slice(2,5) 2번까지 짜르고 3~5번까지 보여줌.  앞의2는 어디까지
    console.log(replace);
    console.log(replace2);
    //console.log(replace3);
-   console.log("정규식으로 대소문자 띄어쓰기 아직안됨.");
+   console.log("------try_01------");
 */
 
     var upper = "hellOTherE,HoWArEYoUDoinG??"; //아 답답해 -_-
@@ -298,13 +298,22 @@ slice(2,5) 2번까지 짜르고 3~5번까지 보여줌.  앞의2는 어디까지
     var first = lowCase[0].toUpperCase();
     var rests = lowCase.slice(1);
     var print = first + rests;
-    
+    console.log("------try_02------");
+
     var syntax = upper.replace("hellOTherE,HoWArEYoUDoinG??", "Hello there, how are you doing??");
     console.log(length2);
     console.log(print+ "  R");
     console.log(syntax + "    야매야매");
-    console.log("-----------");
-/* 
+    console.log("-----try_03------");
+
+    var some = 'hellOTherE,HoWArEYoUDoinG??';
+    var answer = some.replace(/([A-Z])/g, ' $1').replace(/\s([A-Z])\s/g, '$1 ').replace(/\s([A-Z][?,])/g, '$1');
+    var regExp = answer.toLowerCase().replace(/^./, function (match) {
+      return match.toUpperCase();
+    })
+    console.log(regExp);
+    console.log("------try_04------");
+    /* 
 불리언 p.30~39
 참과 거짓 구분
 */
