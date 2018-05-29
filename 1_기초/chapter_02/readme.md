@@ -30,7 +30,7 @@
 
 ----------------------
 
-####<가정>  
+#### <가정>  
 ------
 some에   'hellOTherE,HoWArEYoUDoinG??' 넣는다.   
 answer에 some의 대문자의 전역을 색인 한 후에 대문자 앞에 띄어쓰기를하여 replace(변환) 한다.   
