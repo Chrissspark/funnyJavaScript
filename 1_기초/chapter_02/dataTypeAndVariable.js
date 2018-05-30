@@ -450,4 +450,3 @@ NOT = !
     var newNull = null;
     console.log(newVar);
     console.log(newNull);
-    
