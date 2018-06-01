@@ -40,19 +40,12 @@
     console.log(numAndDinousar[2][0]); // can call array in array
 //p. 47
     const xman = ['beast', 'mistic','wolverrine'];
-<<<<<<< HEAD
     console.log(xman.length); //3 배열의 개수가 나옴.
     console.log(xman[xman.length]);
     console.log(xman[xman.length-1]); //2
     console.log(xman[xman.length-2]);
     console.log(xman[xman.length-3]);
     console.log(xman[xman.length-4]);
-=======
-    console.log(xman.length); //3
-    console.log(xman[xman.length-1]); //2
-//책에서는 xman.length-1 하면 '울버린' 나온다는데 숫자가 줄어드는건 뭐징
-
->>>>>>> 8728f3c977cdba1763980841973b35a9f50268d4
 /*
 책에서는 xman[xman.length-1]; 하면 '울버린' 이 왜 나오지...
 프로그래밍은 숫자 카운트를 0부터함. length 속성은 1부터함.
@@ -66,9 +59,6 @@ element addition in array
     .unshift(); // single,plural element at front
     .spilce(0,0,'n');  (location,  remove the number of factor`s, add 'factor')
 */
-<<<<<<< HEAD
-
-
 const animal = ['cat','dog','human'];
       animal.push('humanDogs','HugeDogHuman`s');
       console.log(animal);
@@ -99,16 +89,3 @@ console.log(otherSplice);
         at <anonymous>:1:1
 */
 
-=======
-/*
-const a = [];
-a.push('s');
-console.log(a);
-a = {}
-
-let b = [];
-b.push('s');
-console.log(b);
-b = {}
-*/
->>>>>>> 8728f3c977cdba1763980841973b35a9f50268d4
