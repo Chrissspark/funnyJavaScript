@@ -28,7 +28,7 @@
 
     const xman = ['beast', 'mistic','wolverrine'];
     console.log(xman.length); //3
-    console.log(xman.length-1); //2
+    console.log(xman[xman.length-1]); //2
 //책에서는 xman.length-1 하면 '울버린' 나온다는데 숫자가 줄어드는건 뭐징
 
 /*
