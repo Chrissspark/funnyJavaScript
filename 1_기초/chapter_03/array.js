@@ -87,5 +87,6 @@ console.log(otherSplice);
         console.log(otherSplice);
         VM77:1 Uncaught SyntaxError: Identifier 'otherSplice' has already been declared
         at <anonymous>:1:1
-*/
+asdmkalsmdklamsld
+        */
 
