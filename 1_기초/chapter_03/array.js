@@ -89,14 +89,4 @@ console.log(otherSplice);
         at <anonymous>:1:1
 */
 
-/* 
-header.scss   => map.scss / header.css
-	=> _hedaer.scss
-	 	=> index.scss
-			=> @import "_header.scss" 
 
-기존에는 header.scss등 컴포넌트별 scss를 나눌때 각각의 컴포넌트의 scss들이 map.scss라는 무의미한 파일이 생성되는데
-앞에 _붙이면 watch에 걸리지 않아 map.scss가 생기지않고
-index.scss에서 @import "_header.scss" 같은 방식으로 불러오면
-map.scss를 최소화 할 수 있음.
-*/
