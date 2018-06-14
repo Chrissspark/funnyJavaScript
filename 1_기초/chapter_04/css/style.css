@@ -1,0 +1,11 @@
+html,body{margin:0; padding:0;}
+body{text-align: center;}
+div{margin:0 auto;}
+h1{color:red;}
+h2{color:blue;}
+h3{color:green;}
+h4{color:#7fda4a;}
+h5{color:#b95d96;}
+h6{color:#7a4356;}
+a{text-decoration:none;}
+a:hover{color:white; transition:0.5s; background-color:rgba(0,0,0,0.6);}
