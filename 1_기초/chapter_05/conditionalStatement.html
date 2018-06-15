@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script>
+  /*p.91~
+  conditional&Statement
+  조건문 : '이것'이 '참'이면 '이것'을 실행해. '이것'이 '거짓'이면 '저것'을 실행해.
+  반복문 : 어떤 내용이 '참' 인 동안 계속 이걸 실행해.
+  */
+  var 메세지 = "안녕하세요?!";
+  console.log(메세지);
+  
+  var name = "레오나르도";
+  console.log("안녕하시렵니까?!"+name+"님!!!?");
+  if(name.length > 7){
+    console.log("WOW, It`s pretty long NAME.");
+  }else{
+    console.log("그리 긴 이름은 아니네요.")
+  }
+
+  var 깐풍기 = false;
+  var 팔보채 = false;
+  var 탕수육 = false;
+
+  if(깐풍기){
+    console.log("조아!!!!");
+  }else if (팔보채){
+    console.log("이건 별로야!!!");
+  }else if (탕수육){
+    console.log("완전조아!!!");
+  }/*else{
+    console.log("음, 짜장면이 좋겠어");
+  }*/;
+
+ //연습문제
+  var 이름 = "박창근";
+
+  if (이름 === "박창근"){
+    console.log ("나잖아.");
+  }else if(이름 === "아빠"){
+  console.log ("아빠왔다.")
+  }else if(이름 === "마더"){
+    console.log("밥 먹었니?")
+  }else{
+    console.log("누구세요?")
+  };
+
+  var 이름2 = {나: "창ㄱ", 아빠: "아빠", 엄마: "아빠", 형: "형"};
+  
+  if (이름2.나 === "창근"){
+    console.log ("나잖아.");
+  }else if(이름2.아빠 === 이름2.엄마){
+    console.log("여행갔다올게");
+  }else if(이름2.아빠 === "아빠"){
+  console.log ("아빠왔다.")
+  }else if(이름2.엄마 === "마더"){
+    console.log("밥 먹었니?")
+  }else{
+    console.log("누구세요?")
+  };
+
+/*p.98
+  while
+  for
+*/
+
+  </script>
+</head>
+<body>
+</body>
+</html>
+
