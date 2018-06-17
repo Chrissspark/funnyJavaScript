@@ -73,19 +73,21 @@ function second () {
 4. 네스팅된 스코프
  - 함수가 다른 함수 내부에서 정의되었다면, 내부 함수는 외부 함수의 변수에 접근 할 수 있다.  
    이런걸 __렉시컬 스코핑__ 이라고 부른다. 하지만, 외부 함수는 내부 함수의 변수에 접근 할 수 없다.
-   ```javascript
-   function outerFunction () {
-  const outer = 'I’m the outer function!'
+  
+  ```javascript
+  function outerFunction () {
+    const outer = 'I’m the outer function!'
     
-  function innerFunction() {
-     const inner = 'I’m the inner function!'
-     console.log(outer) // I’m the outer function!
-  }
+    function innerFunction() {
+       const inner = 'I’m the inner function!'
+      console.log(outer) // I’m the outer function!
+    }
     
   console.log(inner) // Error, inner is not defined
-}
-   ```
-   > **안에서 밖으로 나갈 순 있지만, 밖에서 안으로는 들어올 수 없다.**
+  }
+   ```  
+
+   **안에서 밖으로 나갈 순 있지만, 밖에서 안으로는 들어올 수 없다.**
 
    
    ---------    ↑(o)   ↓(x)    
@@ -102,7 +104,8 @@ function second () {
 
 5. 클로저
  - 함수 내부에 함수를 작성 할 때마다, 클로저를 생성한 것.  
- - 클로저는 차후에 외부 함수의 변수를 사용할 수 있기 때문에 대개 반환하여 사용.
+ - 클로저는 차후에 외부 함수의 변수를 사용할 수 있기 때문에 대개 반환하여 사용.  
+
  ```javascript
  function outerFunction () {
   const outer = 'I see the outer variable!'
@@ -111,7 +114,6 @@ function second () {
   }
   return innerFunction
 }
-outerFunction()() // I see the outer variable!
+outerFunction()(); // I see the outer variable!
  ```
  - 클로저는 외부 함수의 변수에 접근할 수 있기 때문에, 일반적으로 __사이드 이펙크 제어__ 와 __private변수 생성__ 에 사용한다.
-  
