@@ -16,6 +16,7 @@
 * HTML 기초  
   - V.0.1 [-chapter04(HTML의 기초)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_04) 2018.06.14
 * 조건문과 반복문
+ - V.0.1 [-chapter05(조건문과 반복문)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_05)2018.06.17
 * 행맨 게임 제작
 * 함수
 
@@ -30,9 +31,3 @@
 * 캔버스 애니메이션
 * 키보드를 이용한 애니메이션 제어
 * 뱀게임 만들기  
-
-|  First try    |   Second try  | Third try|
-|:------------: | :-------------: | :------------:|
-|  fail         |      faill    | succeed     |
-|  fail         | succeed      |   faill      |
-|    succeed   |     faill     |   succeed   |
