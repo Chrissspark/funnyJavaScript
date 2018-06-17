@@ -4,28 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
+  <title>제어문</title>
   <script>
   /*p.91~
   conditional&Statement
   조건문 : '이것'이 '참'이면 '이것'을 실행해. '이것'이 '거짓'이면 '저것'을 실행해.
   반복문 : 어떤 내용이 '참' 인 동안 계속 이걸 실행해.
   */
-  var 메세지 = "안녕하세요?!";
+  var 메세지= "안녕하세요?!";
   console.log(메세지);
   
-  var name = "레오나르도";
+  var name= "레오나르도";
   console.log("안녕하시렵니까?!"+name+"님!!!?");
-  if(name.length > 7){
+  if(name.length> 7){
     console.log("WOW, It`s pretty long NAME.");
   }else{
     console.log("그리 긴 이름은 아니네요.")
   }
 
-  var 깐풍기 = false;
-  var 팔보채 = false;
-  var 탕수육 = false;
+  var 깐풍기= false;
+  var 팔보채= false;
+  var 탕수육= false;
 
   if(깐풍기){
     console.log("조아!!!!");
@@ -38,38 +37,128 @@
   }*/;
 
  //연습문제
-  var 이름 = "박창근";
+  var 이름= "박창근";
 
-  if (이름 === "박창근"){
+  if (이름=== "박창근"){
     console.log ("나잖아.");
-  }else if(이름 === "아빠"){
+  }else if(이름=== "아빠"){
   console.log ("아빠왔다.")
-  }else if(이름 === "마더"){
+  }else if(이름=== "마더"){
     console.log("밥 먹었니?")
   }else{
     console.log("누구세요?")
   };
 
-  var 이름2 = {나: "창ㄱ", 아빠: "아빠", 엄마: "아빠", 형: "형"};
+  var 이름2= {나:"창ㄱ", 아빠:"아빠", 엄마:"아빠", 형:"형"};
   
-  if (이름2.나 === "창근"){
+  if (이름2.나=== "창근"){
     console.log ("나잖아.");
-  }else if(이름2.아빠 === 이름2.엄마){
+  }else if(이름2.아빠=== 이름2.엄마){
     console.log("여행갔다올게");
-  }else if(이름2.아빠 === "아빠"){
+  }else if(이름2.아빠=== "아빠"){
   console.log ("아빠왔다.")
-  }else if(이름2.엄마 === "마더"){
+  }else if(이름2.엄마=== "마더"){
     console.log("밥 먹었니?")
   }else{
     console.log("누구세요?")
   };
 
 /*p.98
-  while
-  for
+  while : 초기식, 조건식, 증가식을 따로따로 작성해야함.
+  for : 초기식, 조건식, 증가식을 for문에 한번에 작성 가능.
 */
+  function whiles (){
+    var i= 0;
+    while(i< 10){  //if문처럼 true일 경우에만 실행된다. 
+      document.write("숫자를 셉니다. " + i +"</br>");
+      i++; //조건만 넣기 때문에 초기식, 증가식을 추가해주어야 한다.
+    }
+  }whiles();
+  document.write("숫자 세기 끝"+"</br>");
 
-  </script>
+  function fors () {
+    for(var j= 0; j< 10; j++){  // 조건식 조건문을 다 넣기 때문에 코드가 짧아질 수 있다.
+      document.write("양을" + j + "만큼 셌어요."+"</br>");
+    }
+  }fors();
+  console.log("ZzzZzzZzzZzz"+"</br>");
+
+  function animal (){
+    var 동물 = ["사자", "홍학", "강아지", "고양이"];
+      for(var i= 0; i< 동물.length; i++){
+        document.write("이 동물원에는 이런 동물이 삽니다: "+ 동물[i]+ ".</br>")
+      }
+  }animal();
+
+function dubbleSquare (){
+  for(var x= 2; x< 10000; x= x* 2){
+    document.write(x);
+    console.log(x);
+    document.write("</br>");
+  }
+}dubbleSquare();
+
+function whileTripleSquare() {
+  var z = 3;
+  while(z< 10000){
+    console.log(z);
+    document.write(z+"</br>"); 
+    z= z* 3;
+  }
+}whileTripleSquare();
+
+//Practice
+//#1. 귀여운 동물들
+function cuteAnimals(){
+  var 동물 = ['고양이', '강아지', '고릴라', '침팬치'];
+  for(i= 0; i<동물.length; i++){
+    동물[i] = "귀여운" + 동물[i];
+    // console.log(동물); 
+    // ㄴ> 귀여운이 고양이,강아지,고릴라,침팬치 순으로 추가적으로 부여됨.
+      // 귀여운고양이,강아지 ...
+      // 귀여운고양이,귀여운강아지,고릴라...
+      // 귀여운고양이,귀여운강아지,귀여운고릴라,침팬치...
+  }
+  console.log(동물);
+  document.write(동물);   // =>for 문 다돌리고 실행.
+  document.write("</br>");
+}cuteAnimals();
+
+//#2. 무작위 문자열 생성기
+function munJaTen(){
+  var 알파벳 = 'abcdefgghijklmlopqrstuvwxyz';
+  var 무작위 = '';
+  var k = 0;
+  while(k < 6){
+    무작위+= 알파벳[Math.floor(Math.random()* 알파벳.length)];
+    k++;   
+  }
+  document.write(무작위);
+  console.log(무작위);
+  document.write("</br>");  
+}munJaTen();
+
+function h4Ck (){
+  //A= 4 ,E= 3, I= 1 , O= 0
+  var input = 'javascript is awesome';
+  var output = '';
+    for(var z= 0; z< input.length; z++){
+      if(input[z] === 'a'){
+        output += 4;
+      }else if(input[z] === 'e'){
+        output += 3;
+      }else if(input[z] === 'i'){
+        output+= 1;
+      }else if(input[z] === 'o'){
+      output += 0;
+    }else{
+      output += input[z];
+    }
+  }
+  console.log(output);
+  document.write(output);
+}h4Ck();
+</script>
 </head>
 <body>
 </body>
