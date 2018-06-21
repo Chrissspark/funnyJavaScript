@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>행맨</title>
+<script>
+  var words = [
+    'javascript',
+    'monkey',
+    'amazing',
+    'pancake'
+    ];
+
+  var word = words[Math.floor(Math.random()*words.length)];
+
+  var answerArray = [];
+    for(var i= 0; i< word.length; i++){
+      answerArray[i]= '_';
+    }
+
+  var remainingLetters = word.length;
+
+    while(remainingLetters> 0){
+      alert(answerArray.join(" "));
+      
+      var guess = prompt("글자를 입력하세요. 취소를 누르면 게임을 멈춥니다.");
+        if(guess === null){
+          break;
+        }else if(guess.length !== 1){
+          alert("한 글자만 입력해주세요.");        
+        }else{
+          for(var j=0; j< word.length; j++){
+            if(word[j]=== guess){
+              answerArray[j] = guess;
+              remainingLetters--;
+            }
+          }
+        } 
+
+    }
+    alert(answerArray.join(" "));
+    alert("잘하셨어요! 정답은"+ word + "이무니다!");
+</script>
+</head>
+<body>
+  
+</body>
+</html>
