@@ -18,7 +18,7 @@
 * 조건문과 반복문
  - V.0.1 [-chapter05,06(조건문과 반복문)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_05)2018.06.17
 * 행맨 게임 제작  
-- V.0.01[-chapter07(행맨 게임 제작)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_07/hangman.html) 2018.06.21  
+ - V.0.01[-chapter07(행맨 게임 제작)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_07/hangman.html) 2018.06.21  
 * 함수
 
 2. 고급 자바스크립트
