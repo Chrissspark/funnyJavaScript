@@ -67,3 +67,7 @@ console.log(a);  //4번 결과:1
 ![hoistiong_14](img/14.PNG)  
 ![hoistiong_15](img/15.PNG)  
 ![hoistiong_16](img/16.PNG)  
+
+
+
+출처 및 참고: [인프런_javaScriptFlow](https://www.inflearn.com/course-status-2/)
