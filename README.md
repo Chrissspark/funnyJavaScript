@@ -1,4 +1,4 @@
-# ![logo](img/logo.png) studyGroup  
+# studyGroup  
 
 >__Personally it Studied of javaScript__    
         
