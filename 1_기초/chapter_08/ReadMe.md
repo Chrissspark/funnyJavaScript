@@ -50,3 +50,20 @@ var a = 1;
 outer();
 console.log(a);  //4번 결과:1
 ```
+
+![hoistiong_01](/img/1.png)
+![hoistiong_02](/img/2.png)
+![hoistiong_03](/img/3.png)
+![hoistiong_04](/img/4.png)
+![hoistiong_05](/img/5.png)
+![hoistiong_06](/img/6.png)
+![hoistiong_07](/img/7.png)
+![hoistiong_08](/img/8.png)
+![hoistiong_09](/img/9.png)
+![hoistiong_10](/img/10.png)
+![hoistiong_11](/img/11.png)
+![hoistiong_12](/img/12.png)
+![hoistiong_13](/img/13.png)
+![hoistiong_14](/img/14.png)
+![hoistiong_15](/img/15.png)
+![hoistiong_16](/img/16.png)
