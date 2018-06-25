@@ -1,5 +1,32 @@
 # 함수
-### 함수선언문과 함수표현식  
+
+### 1.호이스팅  
+호이스팅이란?  
+```
+hoist: 1. (흔히 밧줄이나 장비를 이용하여) 들어올리다.   
+       2. (화물・장애인을 들어올리기 위한) 승강 장치.  
+```
+무엇을 끌어올리는가?  
+  1. 변수'선언'  
+  2. 함수'선언'  
+```javascript
+console.log(a());   
+console.log(b());   
+console.log(c());   
+                    
+function a() {      
+    return 'a';        
+}               
+var b = function bb(){
+    return 'bb';
+}
+var c = function (){
+    return 'c';
+}
+```
+
+
+### 2.함수선언문과 함수표현식  
 
 1. 함수선언문(function declaration)  
 ```javascript
@@ -29,7 +56,7 @@ function(){ // 익명함수 선언
 - 함수선언문을 이용하면 변수,함수를 찾아야하며 어디 있는지 정확히   
  파악하는데 어려움이 있어, 함수선언문 보다 함수표현식 사용을 권장한다.
 
-### 함수스코프, 실행컨텍스트  
+### 3.함수스코프, 실행컨텍스트  
   
 실행 컨텍스트에는 호이스팅, this 바인딩 등의 정보가 담긴다.  
   
@@ -68,6 +95,6 @@ console.log(a);  //4번 결과:1
 ![hoistiong_15](img/15.PNG)  
 ![hoistiong_16](img/16.PNG)  
 
-
+### 4.메서드
 
 출처 및 참고: [인프런_javaScriptFlow](https://www.inflearn.com/course-status-2/)
