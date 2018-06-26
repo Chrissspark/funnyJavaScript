@@ -133,8 +133,103 @@ names();  //Mac
   
   
 ### 1-3. 전역변수
+함수의 외부에서 선언된 모든 변수는 전역범위를 가지며 **브라우저** 에서는 window, **node.js** 에서는 global객체를 가르킨다.  
+  
+전역변수는 var키워드를 이용하여 선언할 수 있고, var키워드를 사용하지 않고 선언할 수도 있다.
+```javascript
+var name = 'chris'; // var키워드를 이용한 선언
+var name;  
+  
 
+name = 'chris';  //var키워드를 이용하지 않은 선언
+name;
+```
+모든 전역변수는 window,global객체와 연결되며 window.Variable , global.Variable이라고 할 수 있다.  
+  
+브라우저 이용시 window객체를 통해 모든 전역변수에 접근이 가능하다.
+```javascript
+console.log(window.name); //chris;
+console.log("name" in window);
+console.log("name" in window);
+```  
+   
+변수가 최초 선언 없이(var키워드를 사용해서) 초기화 되었다면, 이 변수는 자동적으로 **전역컨텍스트** 에 추가된다.  
+  
+컨텍스트는 함수스코프와 함께 다뤄볼 예정이다.
+```javascript
+function showMyage(){
+  //age는 전역변수
+  age = 999;
+  console.log(age);
+}
+showMyAge();
+  //age는 전역변수이므로, 이런식으로도 호출될 수 있다.
+console.log(age); // 999
+```  
+  
+아래의 firstName은 둘 다 전역범위 입니다. 두번째, firstName은 {}블럭으로 쌓여있지만, 자바스크립트는 블럭단위 범위를 지원하지 않ㅎ는다는 것을 기억해야한다.
+```javascript
+var firstName = "Richard";
+{
+     var firstName = "Bob";
+}
+console.log(firstName); // Bob
+```  
+  
+다른 예제
+```javascript
+for (var i=1; i<=10; i++) {
+     console.log(i); // 1~10까지 출력
+}
+// 변수 i는 전역 변수입니다. 그러므로, 아래 함수 호출시 i는 for문에서 실행된 후 마지막 값을 가르키게 됩니다.
+function aNumber() {
+     console.log(i);
+}
+aNumber(); // 11
+```  
+  
+setTimeout 변수는 전역 범위에서 실행된다.
 
+setTimeout 안에서 선언된 모든 함수는 전역 범위에서 실행된다. 다음 예제를 주의해서 봐야한다.  
+ 
+```javascript
+// setTimeout 함수내에서 사용된 "this"객체는 myObj가 아니라, window객체를 참조.
+var highValue = 200;
+var constantVal = 2;
+var myObj = {
+     highValue: 20,
+     constantVal: 5,
+     calculateIt: function() {
+          setTimeout(function() {
+               console.log(this.constantVal * this.highValue);
+          }, 2000);
+     }
+}
+// 전역변수인 highValue와 constantVal을 사용하여 계산. 200*2.
+myObj.calculateIt(); //400
+```   
+
+**전역 범위를 오염시키지 마십시오**     
+   
+자바스크립트 전문가가 되려면, 가급적 전역 범위에 변수를 생성하는것을 피하도록 해야한다.  
+  
+```javascript
+// 다음 두 변수는 전역 범위에 있다.
+var firstName, lastName;
+function fullName() {
+     console.log("Full Name : " + firstName + " " + lastName);
+}
+```  
+
+다음은, 개선된 코드로서 전역범위를 덜 오염시킨다.
+```javascript
+// 함수내에 선언함으로서 이것은 지역변수 이다.
+function fullName() {
+     var firstName = "Michael", lastName = "Jackson";
+     console.log("Full Name : " + firstName + " " + lastName);
+}
+```
+위의, 예제에서 fullName() 함수 역시 전역 범위에 있다.
 ## .호이스팅  
 호이스팅이란?  
 ```
@@ -232,5 +327,9 @@ console.log(a);  //4번 결과:1
 
 ## .메서드
 
-출처 및 참고: [인프런_javaScriptFlow](https://www.inflearn.com/course-status-2/),  
-[자바스크립트의 변수범위와 호이스팅](http://chanlee.github.io/2013/12/10/javascript-variable-scope-and-hoisting/)
+출처 및 참고: [인프런_javaScriptFlow](https://www.inflearn.com/course-status-2/),    
+
+
+[자바스크립트의 변수범위와 호이스팅](http://chanlee.github.io/2013/12/10/javascript-variable-scope-and-hoisting/),  
+  
+[JavaScript Variable Scope and Hoisting Explained](http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/)
