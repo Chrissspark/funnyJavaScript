@@ -66,7 +66,7 @@ console.log(changeName("Hello"));   // Hello-inner1-inner2
  ```
 ***
   
-### 1-2. 지역변수(함수수준 범위)  
+### 1-1. 지역변수(함수수준 범위)  
 다른 프로그래밍 언어와 달리, 자바스크립트는 블럭수준(block-level)의 범위를 가지고 있지 않다.  
   
 대신, 함수수준(function-level)의 범위를 가진다. 함수내에 정의된 변수는 지역범위를 가지게되며, **해당함수와 내부 함수에서만 접근**이 가능하다.    
@@ -136,7 +136,7 @@ names();  //Mac
 ***  
   
   
-### 1-3. 전역변수
+### 1-2. 전역변수
 함수의 외부에서 선언된 모든 변수는 전역범위를 가지며 **브라우저** 에서는 window, **node.js** 에서는 global객체를 가르킨다.  
   
 전역변수는 var키워드를 이용하여 선언할 수 있고, var키워드를 사용하지 않고 선언할 수도 있다.
@@ -236,7 +236,7 @@ function fullName() {
 위의, 예제에서 fullName() 함수 역시 전역 범위에 있다.  
   
 ***
-## 2.호이스팅  
+## 2. 호이스팅  
 호이스팅이란?  
 ```
 
@@ -287,10 +287,10 @@ c = function (){
 위와 같이 전환을 마친 상태에서 진행이된다.    
 함수 선언은 통째로 올라간 반면에 함수표현식은 선언만 올렸다. 할당은 해당사항이 아니다.   
 _함수 선언문_ 은 **그 자체로 하나의 선언**인 반면, _함수표현식_(var b = , var c =)은 **선언과 할당이 한문장 안에 이뤄지는 것으로 분리가 가능**하다.   
-![hoisting_01](img/hoisting_01)  
+![hoisting_01](img/hoisting_01.jpg)  
 
 ***
-## 3.함수선언문과 함수표현식  
+## 3. 함수 선언문과 함수 표현식  
 함수선언문과 함수표현식의 차이는 **할당** 여부에 있다.  
 할당을 하지 않으면 전체가 호이스팅의 대상이되고, 할당을 하게되면 함수는 그자리에 남아있고 변수만 호이스팅을 하게 된다.  
 - 호이스팅이 되느냐에 따라 실무에서 엄청난 차이가 나타난다.    
@@ -313,7 +313,7 @@ sum (3,4);
    
      
        
-![function_01](img/function_01)
+![function_01](img/function_01.PNG)
 1. 함수선언문(function declaration)  
 ```javascript
 function a(){
@@ -330,7 +330,7 @@ var b = function bb(){
 ```  
   
 3. (익명)함수표현식(unnamed/annnymous function expression)  
-![function_02](img/function_02)
+![function_02](img/function_02.PNG)
 ```javascript  
 var c =  
 function(){ 
