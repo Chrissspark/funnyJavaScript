@@ -239,12 +239,17 @@ function fullName() {
 ## 2.호이스팅  
 호이스팅이란?  
 ```
+
 hoist: 1. (흔히 밧줄이나 장비를 이용하여) 들어올리다.   
        2. (화물・장애인을 들어올리기 위한) 승강 장치.  
 ```
 무엇을 끌어올리는가?  
   1. 변수'선언'  
   2. 함수'선언'  
+
+호이스팅은 선언과 밀접한 관련이 있다.
+자바스크립트 엔진은 코드를 실행하기 전단계로 코드 전반에 걸쳐서 선언된 내용들이 있는지 쭉 흝어보고 발견하는 족족 위로 끌어올린다.
+이러한 성질들을 모르는 상태에서 아래의 코드를 보게되면 첫줄부터 오류를 뿜어야 한다.
 ```javascript
 console.log(a());   
 console.log(b());   
@@ -259,11 +264,56 @@ var b = function bb(){
 var c = function (){
     return 'c';
 }
-```
+```   
+하지만 자바스크립트는 호이스팅으로 인해
+```javascript
+function a(){
+  return 'a';
+}
+var b; 
+var c;
+console.log(a());   
+console.log(b());   //함수표현식은 변수 선언부만 호이스팅되고 함수 본문은 호이스팅되지 않기 때문에, 
+                          //함수가 정의되기 이전에 함수를 호출하면 오류가 난다. 즉, 의도된 오류이다.
+console.log(c());  
+  
+b = function bb(){
+  return 'bb';
+}
+c = function (){
+  return 'c';
+}
+```  
+위와 같이 전환을 마친 상태에서 진행이된다.    
+함수 선언은 통째로 올라간 반면에 함수표현식은 선언만 올렸다. 할당은 해당사항이 아니다.   
+_함수 선언문_ 은 **그 자체로 하나의 선언**인 반면, _함수표현식_(var b = , var c =)은 **선언과 할당이 한문장 안에 이뤄지는 것으로 분리가 가능**하다.   
+![hoisting_01](img/hoisting_01)  
 
 ***
 ## 3.함수선언문과 함수표현식  
+함수선언문과 함수표현식의 차이는 **할당** 여부에 있다.  
+할당을 하지 않으면 전체가 호이스팅의 대상이되고, 할당을 하게되면 함수는 그자리에 남아있고 변수만 호이스팅을 하게 된다.  
+- 호이스팅이 되느냐에 따라 실무에서 엄청난 차이가 나타난다.    
+  
+아래의  코드는 협업을 통한 코드를 예로 들어 호이스팅의 중요성을 나타낸다.
+```javascript
+function sum ( a, b ) {   // 작성자 A
+  return a + ' + ' + b + ' = ' + (a+b);
+}
+sum (1,2);   
+  
+ /*  ...  중략 ...   */  
 
+function sum ( a, b ) {  // 작성자 B
+  return a + b;
+}
+sum (3,4);    
+```  
+ 위의 sum이라는 항수가 **호이스팅**에 의해 위로 **끌어올려**질 것이며, **캐스캐이딩**의 원칙으로 나중에 호이스팅된 함수가 이전의 함수를 덮어버리게 되며, 작성자 A의 값은 사라지고 작성자 B의 값만 남을 것이다. 함수 선언문은 위에서 아래로 내려가며 읽어내려간다는 방식을 벗어나 가독성 면에서 매우 좋지 않다.  
+   
+     
+       
+![function_01](img/function_01)
 1. 함수선언문(function declaration)  
 ```javascript
 function a(){
@@ -273,24 +323,23 @@ function a(){
   
 2. 기명 함수표현식(named function expression)
 ```javascript
-//최근 잘 쓰지 않음
+//디버깅에 용이하여 많이 사용했지만, 최근 잘 쓰지 않음
 var b = function bb(){
     return 'bb';
 }  
-```
-3. (익명)함수표현식(unnamed/annnymous function expression)
-```javascript
-    //할당하지 않을경우 전역에 할당됨.   
-    //호이스팅에 의해 위로 끌어올려지고 결과가 달라짐.   
-    //캐스캐이팅에 의해 나중 함수가 이전의 함수를 덮어씜  
-//변수c에 익명함수 할당.   
-var c =  //변수 c선언
-function(){ // 익명함수 선언
+```  
+  
+3. (익명)함수표현식(unnamed/annnymous function expression)  
+![function_02](img/function_02)
+```javascript  
+var c =  
+function(){ 
     return 'c';
 }
-```
+```  
 - 함수선언문을 이용하면 변수,함수를 찾아야하며 어디 있는지 정확히   
  파악하는데 어려움이 있어, 함수선언문 보다 함수표현식 사용을 권장한다.
+ - 안전하고 예측 가능하기 때문에
 ***
 ## 4.함수스코프, 실행컨텍스트  
   
@@ -314,22 +363,22 @@ outer();
 console.log(a);  //4번 결과:1
 ```
 
-![hoistiong_01](img/1.PNG)  
-![hoistiong_02](img/2.PNG)  
-![hoistiong_03](img/3.PNG)  
-![hoistiong_04](img/4.PNG)  
-![hoistiong_05](img/5.PNG)  
-![hoistiong_06](img/6.PNG)  
-![hoistiong_07](img/7.PNG)  
-![hoistiong_08](img/8.PNG)  
-![hoistiong_09](img/9.PNG)  
-![hoistiong_10](img/10.PNG)  
-![hoistiong_11](img/11.PNG)  
-![hoistiong_12](img/12.PNG)  
-![hoistiong_13](img/13.PNG)  
-![hoistiong_14](img/14.PNG)  
-![hoistiong_15](img/15.PNG)  
-![hoistiong_16](img/16.PNG)  
+![scope_01](img/1.PNG)  
+![scope_02](img/2.PNG)  
+![scope_03](img/3.PNG)  
+![scope_04](img/4.PNG)  
+![scope_05](img/5.PNG)  
+![scope_06](img/6.PNG)  
+![scope_07](img/7.PNG)  
+![scope_08](img/8.PNG)  
+![scope_09](img/9.PNG)  
+![scope_10](img/10.PNG)  
+![scope_11](img/11.PNG)  
+![scope_12](img/12.PNG)  
+![scope_13](img/13.PNG)  
+![scope_14](img/14.PNG)  
+![scope_15](img/15.PNG)  
+![scope_16](img/16.PNG)  
 ***
 ## 5.메서드
 객체란 것은 껍데기를 이루는 말이고 실제 객체를 완성하는 구성요소들은  **프로퍼티** 와 **메소드** 이다.  
