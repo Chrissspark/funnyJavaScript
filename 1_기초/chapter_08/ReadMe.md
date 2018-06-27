@@ -368,7 +368,7 @@ console.log(a);  //4번 결과:1
 ![scope_01](img/scope_01.PNG)   
 우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리  
 ![scope_02](img/scope_02.PNG)   
-변수 a 선언
+변수 a 선언  
 ![scope_03](img/scope_03.PNG)   
 함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer    
 스코프가 결정되어 outer 내부에서 선언된 변수의 유효범위는 outer 내부로 국한되고, outer 외부에서 선언된 변수는 outer 내부에서도 접근이 가능하다.  
