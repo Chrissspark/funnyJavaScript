@@ -366,31 +366,53 @@ console.log(a);  //4번 결과:1
 ```
 
 ![scope_01](img/scope_01.PNG)   
-우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리  
-![scope_02](img/scope_02.PNG)   
-변수 a 선언  
-![scope_03](img/scope_03.PNG)   
-함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer    
-스코프가 결정되어 outer 내부에서 선언된 변수의 유효범위는 outer 내부로 국한되고, outer 외부에서 선언된 변수는 outer 내부에서도 접근이 가능하다.  
-![scope_04](img/scope_04.PNG)   
-변수에 1 할당  
-![scope_05](img/scope_05.PNG)   
-outer 함수 호출, 함수가 호출될때 실행컨텍스트가 열림, 실행컨텍스트가 생성될때 this 바인딩과 호이스팅이 이뤄짐.   
-![scope_06](img/scope_06.PNG)  
-함수 inner 선언 global > outer > inner 스코프 생성.  
-![scope_07](img/scope_07.PNG)  
-outer 스코프에서 a 탐색하지만 없기때문에 global 스코프에서 a를 재탐색 후 1출력   
-![scope_08](img/scope_08.PNG)  
-![scope_09](img/scope_09.PNG)  
-![scope_10](img/scope_10.PNG)  
-![scope_11](img/scope_11.PNG)  
-![scope_12](img/scope_12.PNG)  
+- 우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리   
+![scope_02](img/scope_02.PNG)    
+- 변수 a 선언   
+![scope_03](img/scope_03.PNG)    
+- 함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer     
+- 스코프가 결정되어 outer 내부에서 선언된 변수의 유효범위는 outer 내부로 국한되고, outer 외부에서 선언된 변수는 outer 내부에서도 접근이 가능하다.   
+![scope_04](img/scope_04.PNG)    
+- 변수에 1 할당   
+![scope_05](img/scope_05.PNG)    
+- outer 함수 호출, 함수가 호출될때 실행컨텍스트가 열림   
+![scope_06](img/scope_06.PNG)   
+- 실행컨텍스트가 생성될때 this 바인딩과 호이스팅이 이뤄짐.    
+![scope_07](img/scope_07.PNG)   
+- 함수 inner 선언 global > outer > inner 스코프 생성    
+![scope_08](img/scope_08.PNG)   
+- outer 스코프에서 a 탐색하지만 없기때문에 global 스코프에서 a를 재탐색 후 1출력    
+![scope_09](img/scope_09.PNG)   
+- inner 함수 호출, 함수가 실행될때 실행컨텍스트가 열림.  => 이너 실행컨텍스트가 열림.    
+![scope_10](img/scope_10.PNG)   
+- 호이스팅을 함.   
+![scope_11](img/scope_11.PNG)   
+- 변수 a를 선언   
+![scope_12](img/scope_12.PNG)   
+- 변수 선언 후 inner scope에서 a 탐색.    
+- inner scope는 함수 표현식이기 때문에 아래와 같이 해석한다.     
+```javascript
+function inner() {
+  var a;  // 변수의 선언을 끌어올림 (호이스팅)
+  console.log(a);
+  a = 3;  // 값은 그자리에 그대로.
+  // a에는 값이 지정되지 않아 undefined
+  //console.log(a)의 호출 이후에 a에 3이라는 값을 할당.
+}
+```  
+또한, 함수 안의 변수는 지역변수이다.  
 ![scope_13](img/scope_13.PNG)  
+- a에 3 할당  
 ![scope_14](img/scope_14.PNG)  
+- inner 실행컨텍스트 종료  
 ![scope_15](img/scope_15.PNG)  
+outer scope에서 a를 탐색 => 없으니까 global scope에서 a를 재탐색 => 1을 출력  
 ![scope_16](img/scope_16.PNG)  
+outer scope가 종료된다.  
 ![scope_17](img/scope_17.PNG)  
+global scope에서 a 탐색 => 1을 출력  
 ![scope_18](img/scope_18.PNG)  
+전역컨텍스트가 종료된다.  
 ***
 ## 5.메서드
 객체란 것은 껍데기를 이루는 말이고 실제 객체를 완성하는 구성요소들은  **프로퍼티** 와 **메소드** 이다.  
