@@ -310,9 +310,9 @@ function sum ( a, b ) {  // 작성자 B
 sum (3,4);    
 ```  
  위의 sum이라는 함수가 **호이스팅**에 의해 위로 **끌어올려**질 것이며, **캐스캐이딩**의 원칙으로 나중에 호이스팅된 함수가 이전의 함수를 덮어버리게 되며, 작성자 A의 값은 사라지고 작성자 B의 값만 남을 것이다. 함수 선언문은 위에서 아래로 내려가며 읽어내려간다는 방식을 벗어나 가독성 면에서 매우 **좋지 않다.**      
-     
-       
-         
+ .    
+ .      
+ .          
 ![function_01](img/function_01.PNG)
 1. 함수선언문(function declaration)  
 ```javascript
@@ -341,10 +341,10 @@ function(){
  파악하는데 어려움이 있어서 함수선언문 보다 함수표현식이 안전하고 예측 가능하기 때문에 사용을 권장한다.
 ***
 ## 4.함수스코프, 실행컨텍스트  
-  ![contecxt_01](img/contecxt_01.PNG)
-스코프는 함수가 정의될때 결정된다.  
-실행컨텍스트는 함수가 실행될때 생성된다.  
-실행 컨텍스트에는 호이스팅이 이뤄진 후의 함수 본문내용, this 바인딩 등의 정보가 담긴다.  
+  ![contecxt_01](img/contecxt_01.PNG)  
+- 스코프는 함수가 정의될때 결정된다.  
+- 실행컨텍스트는 함수가 실행될때 생성된다.  
+- 실행 컨텍스트에는 호이스팅이 이뤄진 후의 함수 본문내용, this 바인딩 등의 정보가 담긴다.  
 
   
 ```javascript
@@ -364,33 +364,54 @@ var a = 1;
 outer();
 console.log(a);  //4번 결과:1
 ```
+1. 우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리   
+![scope_01](img/scope_01.PNG)    
+  
 
-![scope_01](img/scope_01.PNG)   
-- 우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리   
+2. 변수 a 선언   
 ![scope_02](img/scope_02.PNG)    
-- 변수 a 선언   
-![scope_03](img/scope_03.PNG)    
-- 함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer     
+  
+
+3. 함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer     
 - 스코프가 결정되어 outer 내부에서 선언된 변수의 유효범위는 outer 내부로 국한되고, outer 외부에서 선언된 변수는 outer 내부에서도 접근이 가능하다.   
+![scope_03](img/scope_03.PNG)    
+  
+
+4. 변수에 1 할당   
 ![scope_04](img/scope_04.PNG)    
-- 변수에 1 할당   
-![scope_05](img/scope_05.PNG)    
-- outer 함수 호출, 함수가 호출될때 실행컨텍스트가 열림   
+    
+
+5. outer 함수 호출, 함수가 호출될때 실행컨텍스트가 열림   
+![scope_05](img/scope_05.PNG)      
+  
+
+6. 실행컨텍스트가 생성될때 this 바인딩과 호이스팅이 이뤄짐.    
 ![scope_06](img/scope_06.PNG)   
-- 실행컨텍스트가 생성될때 this 바인딩과 호이스팅이 이뤄짐.    
+  
+
+7. 함수 inner 선언 global > outer > inner 스코프 생성    
 ![scope_07](img/scope_07.PNG)   
-- 함수 inner 선언 global > outer > inner 스코프 생성    
-![scope_08](img/scope_08.PNG)   
-- outer 스코프에서 a 탐색하지만 없기때문에 global 스코프에서 a를 재탐색 후 1출력    
+  
+
+8. outer 스코프에서 a 탐색하지만 없기때문에 global 스코프에서 a를 재탐색 후 1출력    
+![scope_08](img/scope_08.PNG)     
+  
+
+9. inner 함수 호출, 함수가 실행될때 실행컨텍스트가 열림.  => 이너 실행컨텍스트가 열림.    
 ![scope_09](img/scope_09.PNG)   
-- inner 함수 호출, 함수가 실행될때 실행컨텍스트가 열림.  => 이너 실행컨텍스트가 열림.    
-![scope_10](img/scope_10.PNG)   
-- 호이스팅을 함.   
+  
+
+10. 호이스팅을 함.   
+![scope_10](img/scope_10.PNG)    
+   
+   
+11. 변수 a를 선언   
 ![scope_11](img/scope_11.PNG)   
-- 변수 a를 선언   
-![scope_12](img/scope_12.PNG)   
-- 변수 선언 후 inner scope에서 a 탐색.    
+  
+
+12. 변수 선언 후 inner scope에서 a 탐색.    
 - inner scope는 함수 표현식이기 때문에 아래와 같이 해석한다.     
+![scope_12](img/scope_12.PNG)   
 ```javascript
 function inner() {
   var a;  // 변수의 선언을 끌어올림 (호이스팅)
@@ -401,18 +422,30 @@ function inner() {
 }
 ```  
 또한, 함수 안의 변수는 지역변수이다.  
-![scope_13](img/scope_13.PNG)  
-- a에 3 할당  
+
+13.  a에 3 할당  
+![scope_13](img/scope_13.PNG)    
+  
+
+14. inner 실행컨텍스트 종료  
 ![scope_14](img/scope_14.PNG)  
-- inner 실행컨텍스트 종료  
+  
+
+15. outer scope에서 a를 탐색 => 없으니까 global scope에서 a를 재탐색 => 1을 출력  
 ![scope_15](img/scope_15.PNG)  
-outer scope에서 a를 탐색 => 없으니까 global scope에서 a를 재탐색 => 1을 출력  
+   
+   
+16. outer scope가 종료된다.  
 ![scope_16](img/scope_16.PNG)  
-outer scope가 종료된다.  
+    
+  
+17. global scope에서 a 탐색 => 1을 출력  
 ![scope_17](img/scope_17.PNG)  
-global scope에서 a 탐색 => 1을 출력  
-![scope_18](img/scope_18.PNG)  
-전역컨텍스트가 종료된다.  
+  
+    
+18. 전역컨텍스트가 종료된다.  
+![scope_18](img/scope_18.PNG)    
+
 ***
 ## 5.메서드
 객체란 것은 껍데기를 이루는 말이고 실제 객체를 완성하는 구성요소들은  **프로퍼티** 와 **메소드** 이다.  
