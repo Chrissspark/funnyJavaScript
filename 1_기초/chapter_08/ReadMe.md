@@ -367,48 +367,59 @@ console.log(a);  //4번 결과:1
 1. 우주같은 빈공간의 전역실행컨텍스트 생성(global), 전역컨텍스트 생성됨, 호이스팅과 this바인딩 등을 처리   
 ![scope_01](img/scope_01.PNG)    
   
-
+  
+    
 2. 변수 a 선언   
 ![scope_02](img/scope_02.PNG)    
   
-
+  
+   
 3. 함수 선언문이 전체를 호이스팅하면서 선언하면서 동시에 선언. 함수가 선언될때 스코프 결정. global > outer     
 - 스코프가 결정되어 outer 내부에서 선언된 변수의 유효범위는 outer 내부로 국한되고, outer 외부에서 선언된 변수는 outer 내부에서도 접근이 가능하다.   
 ![scope_03](img/scope_03.PNG)    
-  
-
-4. 변수에 1 할당   
-![scope_04](img/scope_04.PNG)    
     
 
+   
+4. 변수에 1 할당   
+![scope_04](img/scope_04.PNG)    
+      
+
+   
 5. outer 함수 호출, 함수가 호출될때 실행컨텍스트가 열림   
 ![scope_05](img/scope_05.PNG)      
   
-
+  
+  
 6. 실행컨텍스트가 생성될때 this 바인딩과 호이스팅이 이뤄짐.    
 ![scope_06](img/scope_06.PNG)   
   
-
+  
+  
 7. 함수 inner 선언 global > outer > inner 스코프 생성    
 ![scope_07](img/scope_07.PNG)   
   
-
+  
+  
 8. outer 스코프에서 a 탐색하지만 없기때문에 global 스코프에서 a를 재탐색 후 1출력    
 ![scope_08](img/scope_08.PNG)     
   
-
+  
+  
 9. inner 함수 호출, 함수가 실행될때 실행컨텍스트가 열림.  => 이너 실행컨텍스트가 열림.    
 ![scope_09](img/scope_09.PNG)   
   
-
+  
+  
 10. 호이스팅을 함.   
 ![scope_10](img/scope_10.PNG)    
    
-   
+
+        
 11. 변수 a를 선언   
 ![scope_11](img/scope_11.PNG)   
   
-
+  
+  
 12. 변수 선언 후 inner scope에서 a 탐색.    
 - inner scope는 함수 표현식이기 때문에 아래와 같이 해석한다.     
 ![scope_12](img/scope_12.PNG)   
@@ -422,26 +433,33 @@ function inner() {
 }
 ```  
 또한, 함수 안의 변수는 지역변수이다.  
-
+  
+    
+        
 13.  a에 3 할당  
 ![scope_13](img/scope_13.PNG)    
   
-
+  
+    
 14. inner 실행컨텍스트 종료  
 ![scope_14](img/scope_14.PNG)  
   
-
+  
+    
 15. outer scope에서 a를 탐색 => 없으니까 global scope에서 a를 재탐색 => 1을 출력  
 ![scope_15](img/scope_15.PNG)  
    
-   
+
+    
 16. outer scope가 종료된다.  
 ![scope_16](img/scope_16.PNG)  
     
-  
+    
+    
 17. global scope에서 a 탐색 => 1을 출력  
 ![scope_17](img/scope_17.PNG)  
   
+    
     
 18. 전역컨텍스트가 종료된다.  
 ![scope_18](img/scope_18.PNG)    
