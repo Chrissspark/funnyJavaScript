@@ -6,46 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>함수로 만든 행맨게임</title>
 <script>
-var words = ['javascript', 'monkey', 'amazing', 'pancake', 'cat', 'qurry', 'jquery'];
-var word = words[Math.floor(Math.random()*words.length)];
-var answerArray = [];
-var guessesArry = [];
-var lives = 15;
-var remainingLetters = word.length;
-var counting = answerArray.indexOf(guess);
-//word
+var 단어선택 = function () {
+      var words = [
+        "javascript",
+        "monkey",
+        "amazing",
+        "pancake"
+      ];
 
-//words
+      return words[Math.floor(Math.random() * words.length)];
+    };
 
-//guesses
+    var 정답배열 = function (word) {
+      var answerArray = [];
+      for (var i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+      }
 
-//lives
+      return answerArray;
+    };
 
-//guess prompt
+    var 플레이어진행상황표시 = function (answerArray) {
+      alert(answerArray.join(" "));
+    };
 
-//
+    var 정답입력 = function () {
+      return prompt("취소를 누르면 종료됩니다.");
+    };
 
-/*
-//함수
+    var 게임상태업데이트 = function (guess, word, answerArray) {
+      var status = 0;
+      for (var j = 0; j < word.length; j++) {
+        if (word[j] === guess) {
+          answerArray[j] = guess;
+          status++;
+        }
+      }
 
-var 단어 = 단어선택();
-var 정답배열 = 정답배열만들기(단어);
-var 남은글자 = 단어.length;
+      return status;
+    };
 
-while (남은글자 > 0){
-  플레이어진행상황표시(정답배열);
-  var 입력한답 = 정답입력();
-  if(입력한답 === null){
-    break;
-  }else if(입력한답.length !== 1){
-    alert("한글자만 입력해주세요.");
-  }else{
-    var 정답개수 = 게임상태업데이트(입력한 답, 정답, 정답배열);
-    남은글자 -= 정답개수;
-  }
-}
-정답표시하고플레이어축하하기(정답배열);
-*/
+    var 정답표시하고플레이어축하하기 = function (answerArray) {
+      플레이어진행상황표시(answerArray);
+      alert("잘하셨어요. " + answerArray.join(""));
+    };
+
+    var word = 단어선택();
+    var answerArray = 정답배열(word);
+    var 남은글자 = word.length;
+
+    while (남은글자 > 0) { 플레이어진행상황표시(answerArray); var guess = 정답입력();
+      if (guess === null) {
+        break;
+      } else if (guess.length !== 1) {
+        alert("한글자만 입력해주세요.");
+      } else {
+        var 정답개수 = 게임상태업데이트(guess, word, answerArray);
+        남은글자 -= 정답개수;
+      }
+    }
+
+    정답표시하고플레이어축하하기(answerArray);
 
 </script>
 </head>
