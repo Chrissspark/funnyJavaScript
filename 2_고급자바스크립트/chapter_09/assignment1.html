@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>p{display:none;}</style>
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="main-heading">Hello world!</h1>
+
+  
+
+  <script>
+  document.reday(function(){
+
+    $("#main-heading").text("My friends");
+
+    var friends = ["Joe", "Trisha", "Max"];
+
+    for (var i = 0; i < friends.length; i++) {
+      $("body").append("<p>" + friends[i] + "</p>");
+    }
+
+    $("p").append(" smells!").hide(0).fadeIn(5000);
+
+});
+  </script>
+  
+</body>
+</html>

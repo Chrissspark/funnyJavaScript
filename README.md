@@ -27,11 +27,14 @@
    - V.0.2 - chapter08 (함수) 2018.06.26     
    - V.0.3 - chapter08 (함수) 2018.06.27
    - V.0.4 - chapter08 (함수) 2018.06.28
-   - V.0.5 [chapter08 (함수)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_08)  2018.06.29
+   - V.0.5 - [chapter08 (함수)](https://github.com/Chrissspark/funnyJavaScript/tree/master/1_%EA%B8%B0%EC%B4%88/chapter_08)  2018.06.29
    
 2. 고급 자바스크립트
 * DOM과 jQuery
-   - V.0.1- [chapter_09 (DOM과 jQuery)](https://github.com/Chrissspark/funnyJavaScript/tree/master/2_%EA%B3%A0%EA%B8%89%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/chapter_09) 2018.07.02  
+   - V.0.1- chapter_09 (DOM과 jQuery) 2018.07.02   
+   - V.0.2- [chapter_09 (DOM과 jQuery)](https://github.com/Chrissspark/funnyJavaScript/tree/master/2_%EA%B3%A0%EA%B8%89%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/chapter_09) 2018.07.02      
+
+
 * 인터랙티브 프로그래밍
 * 보물 찾기 게임
 * 객체지향 프로그래밍
