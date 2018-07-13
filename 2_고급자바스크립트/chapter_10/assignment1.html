@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="hi">PUSH ME TO RIGHT</h1>      
+
+  <script>
+  var leftOffset = 0;
+  var moveHeading = function() {
+    $("#hi").offset({ left: leftOffset });
+    leftOffset++;
+    if(leftOffset > 400){
+      leftOffset = 0;
+    }
+  };
+  setInterval(moveHeading, 1);
+  </script>
+
+</body>
+</html>
