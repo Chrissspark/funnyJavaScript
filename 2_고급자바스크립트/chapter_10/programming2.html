@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  #squ{animation-name: colors; animation-iteration-count: infinite; animation-duration: 5s; animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);}
+  @keyframes colors{0%{color:#da9e9e;}  50%{color:#88eeaa;}  100%{color:#e0b218;} };
+  </style>
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  <script>
+    $.noConflict();
+    var J = jQuery;
+
+    var direction = 'right';
+    var offset = 0;
+
+    J('#squ').offset({left: offset, top:offset});
+
+    var moveSquare = function (){
+     
+      if(direction === 'right'){
+        J('#squ').offset({left:offset});
+        offset++;
+        if(offset > 200){
+          offset = 0;
+          direction = 'down';
+        }
+      }else if(direction === 'down'){
+        J('#squ').offset({top: offset});
+        offset++;
+        if(offset > 200){
+          offset = 200;
+          direction = 'left';
+        }
+      }else if(direction === 'left'){
+        J('#squ').offset({left: offset});
+        offset--;
+        if(offset < 0){
+          offset = 200;
+          direction = 'up';
+        }
+      }else if(direction === 'up'){
+        J('#squ').offset({top: offset});
+        offset--;
+        if(offset < 0){
+          offset = 0;
+          direction = 'right';
+        }
+      }
+
+    J('#squ').click(function(e){
+      clearInterval(intervalId);
+      });
+
+  };
+
+  var intervalId = setInterval(moveSquare,10);
+
+    
+  </script>
+  <title>MOVING SQUARE</title>
+</head>
+<body>
+  <h1 id="squ">MOVEMOVE</h1>
+</body>
+</html>
