@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  <title>TREASURE</title>
+</head>
+<body>
+  <h1 id="heading">보물찾기를 시작하지</h1>
+    <img id="map" width=800 height=800 src="http://nostarch.com/images/treasuremap.png">
+
+    <p id="distance"></p>
+    <p id="clicks-remaining"></p>
+
+    <script>
+    var getRandomNum;
+    var getDistance;
+
+    var width = 800;
+    var height = 800;
+    var clicks = 0;
+    var clickLimit = 20;
+
+    var target;
+    var distanceHint;
+
+    var getRandomNum = function (size){
+      return Math.floor(Math.random ()* size);
+    };
+
+    var getDistance = function (distance) {
+      if(distance < 10){
+        return "굉장히 가까워요.";
+      }else if (distance < 20){
+        return "가까워요.";
+      }else if (distance < 40){
+        return "가까워질랑말랑.";
+      }else if (distance < 80){
+        return "쪼금 멀어요.";
+      }else if (distance < 160){
+        return "꽤 멀어요.";
+      }else if (distance < 320){
+        return "멀-어요.";
+      }else if (distance < 640){
+        return "감각이 없네요.";
+      }
+    };
+    </script>
+</body>
+</html>
