@@ -38,7 +38,9 @@
 * 인터랙티브 프로그래밍
    - V.0.1 - chapter_10 (Interactive Programing) 2018.07.13  
    - V.0.2 - [chapter_10 (Interactive Programing)](https://github.com/Chrissspark/funnyJavaScript/tree/master/2_%EA%B3%A0%EA%B8%89%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/chapter_10) 2018.07.16  
-* 보물 찾기 게임
+* 보물 찾기 게임  
+   - V.0.1 - chapter_11 (보물찾기 게임) 2018.07.27  
+   - V.0.2 - [chapter_11 (보물찾기 게임)](https://github.com/Chrissspark/funnyJavaScript/tree/master/2_%EA%B3%A0%EA%B8%89%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/chapter_11) 2018.07.29  
 * 객체지향 프로그래밍
 
 3. 캔버스
